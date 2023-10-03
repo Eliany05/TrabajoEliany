@@ -1,82 +1,166 @@
-/* Importacion de Tipografia */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
-/* selector universal */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@display=swap');
+
+:root{
+    --primary: #e77ff7;
+    --primary-hover: #df37df;
+    --secondary: #efd0f8;
+    --secondary-hover: #000000;
+    --aura: #9265ca80;
+    --background: #0934aa;
+
+}
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--background);
+    font-family: Mulish;
 }
-/* selector por etiqueta */
-span {
-    color: steelblue
+h1{
+    color: var(--secondary);
 }
-/* selector por id */
-#option_one,  #option_three {
-    font-weight: 700;
-    background-color: chocolate;
-    margin-left: 20px;
+.background{
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background-image: url(https://img.pikbest.com/backgrounds/20200318/a-realistic-starry-sky-with-a-full-moon-and-galaxy-v_1724769jpg!w700wp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
 }
+.centering{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.my_form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+    background-color: var(--background);
+    border: 1px solid var(--aura);
+    min-width: 280px;
+    max-width: 460px;
+    width: 100%;
+    padding: 32px;
+}
+.login{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.login_welcome{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.my_form_button{
+    background-color: var(--primary);
+    color: var(--background);
+    white-space: nowrap;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    line-height: 50px;
+    outline:none;
+    font-size: 18px;
+    letter-spacing: 0.25em;
+    text-decoration: none;
+    font-weight: 800;
+    min-height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.text_field input{
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid var(--secondary);
+    height: 50px;
+    letter-spacing: 0.3rem;
+    background-color: transparent;
+    outline: none;
+    transition: .25s;
+    border-radius: 8px;
+    text-indent: 20px;
+    margin-top: 8px;
+}
+.my_form_button:hover{
+    background-color: var(--primary-hover);
+}
+.text_field{
+    position: relative;
+}
+.text_field img{
+    position: absolute;
+    right: -2px;
+    bottom: -4px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%,-50%);
+    transform-origin: center;
+}
+.text_field input:focus{
+    border: 1px solid var(--primary);
+}
+.text_field label{
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    z-index: 10;
+}
+.input_icon{
+    position: absolute;
+    bottom: 0;
+    top: 55%;
+    right: 8px;
+    transform: translate(-50%,-50%);
+    transform-origin:100%;
 
-/* selector por clase */
-.option_group {
-    background-color: black;
 }
-/* selector por atributo */
-:disabled {
-    background-color: red;
+.my_form_actions{
+    display: flex;
+    flex-direction: column;
+    color: var(--secondary);
+    gap: 16px;
+    margin-top: 8px;
 }
-.option_group.other_option {
-    font-size: 50px;
-
+.my_form_actions a{
+    color: var(--secondary);
+    font-weight: 600;
 }
-
-#title_box {
-    color: rgb(0, 0, 184);
-    background-color: azure;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    text-transform: lowercase;
-    margin: 10px 20px 15px 25px;
-    border-radius: 10px;
-    border: 3px dotted #000;
-    padding-bottom: 50px;
-    word-spacing: 15px;
-    letter-spacing: 8px;
-    font-size: 50px;
-    box-shadow: 0px 0px 10px 2px #000fff;
-    -webkit-box-shadow: 20px -8px 23px 0px rgba(167, 89, 89, 0.75);
-    -moz-box-shadow: 20px -8px 23px 0px rgba(136, 29, 118, 0.75);
-    box-shadow: 20px -8px 23px 0px rgba(216, 96, 210, 0.75);
+.my_form_actions a:hover{
+   
 }
-
-#box_father{
-    background-color: #000;
-    width: 200px;
-    height: 200px;
-    background-image: url(https://i.pinimg.com/1200x/8f/cb/1e/8fcb1e95f94d4bee3738854c248b73a2.jpg);
-    background-position: center;
-    background-size: cover;
-    margin-left: 20px;
+.my_form_row{
+    display: flex;
+    justify-content: space-between;
 }
-@media(max_width:799px){
-    body{
-        background-image: url(https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg);
-        background-position: center;
-        background-size: cover;
-
-    }
+.my_form_signup{
+    display: flex;
+    justify-content: center;
 }
-
-/* #box_model {
-    background-color: orange;
-    width: 50%;
-    height: 50%;
-} */
-
-/* aplicacion de media queris */
-
-@media(min-width: 800px) and (max-width:1200px){
-    body{
-        background-color: aquamarine;
-    }
+.my_form a{
+    color: var(--primary);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
 }
